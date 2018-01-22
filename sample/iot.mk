@@ -11,8 +11,11 @@ endif
 
 ifneq (,$(filter -DMQTT_COMM_ENABLED,$(CFLAGS)))
 TARGET              += mqtt-example mqtt_rrpc-example
+TARGET              += mqtt-capture mqtt-perform
 SRCS_mqtt-example   := mqtt/mqtt-example.c
 SRCS_mqtt_rrpc-example := mqtt/mqtt_rrpc-example.c
+SRCS_mqtt-capture   := mqtt/mqtt-capture.c
+SRCS_mqtt-perform   := mqtt/mqtt-perform.c
 
     ifneq (,$(filter -DOTA_ENABLED,$(CFLAGS)))
     ifneq (,$(filter -DOTA_SIGNAL_CHANNEL=1,$(CFLAGS)))

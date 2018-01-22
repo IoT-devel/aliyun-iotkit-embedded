@@ -5,6 +5,8 @@ if [ "${OUTPUT_DIR}" = "" ] || [ ! -d ${OUTPUT_DIR} ]; then exit 1; fi
 
 PROGS=(
     "./mqtt-example"
+    "./mqtt-capture"
+    "./mqtt-perform"
     "./mqtt_rrpc-example unittest"
     "./shadow-example"
     "./sdk-testsuites"
