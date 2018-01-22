@@ -1,0 +1,17 @@
+#CONFIG_ENV_CFLAGS += -Wall
+
+CONFIG_ENV_CFLAGS += \
+    -Os -Wall -Werror \
+    -g3 -rdynamic --coverage \
+    -ansi \
+    -D_PLATFORM_IS_LINUX_ \
+    -DCONFIG_HTTP_AUTH_TIMEOUT=500 \
+    -DCONFIG_MID_HTTP_TIMEOUT=500 \
+    -DCONFIG_GUIDER_AUTH_TIMEOUT=500 \
+
+#OVERRIDE_CC = $(TARGET_CC)
+#OVERRIDE_AR = $(TARGET_AR)
+
+#CONFIG_src/platform =
+#CONFIG_sample =
+CONFIG_src/sdk-tests =
